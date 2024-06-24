@@ -1,0 +1,4 @@
+[submodule "molstar"]
+	path = molstar
+	url = https://github.com/Pierre-51/molstar
+	branch = Reactome_video_animation
