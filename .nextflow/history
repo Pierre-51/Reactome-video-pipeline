@@ -1,3 +1,5 @@
 2024-06-24 15:43:37	2.7s	dreamy_gutenberg	ERR	bd8b8f30dd1390e24d7fe0e26fbe7147	37ff05fc-157b-438c-b8fa-238c4b729928	nextflow run main.nf --version 0.2 -process.echo
 2024-06-24 15:44:19	9.5s	thirsty_bell	OK	bd8b8f30dd1390e24d7fe0e26fbe7147	04364644-41c3-47fc-8132-d3904999b3fd	nextflow run main.nf --version 0.2 -process.echo
 2024-06-24 15:44:34	10.7s	adoring_escher	OK	bd8b8f30dd1390e24d7fe0e26fbe7147	c749f37f-4d34-422c-afd1-9d3112508ef3	nextflow run main.nf --version 0.1 -process.echo
+2024-06-24 16:12:28	9.1s	prickly_liskov	OK	bd8b8f30dd1390e24d7fe0e26fbe7147	25f9e9f2-1681-4665-98fe-4620fbf2dc2d	nextflow run main.nf --version 0.1 -process.echo
+2024-06-24 16:12:49	10.8s	prickly_pasteur	OK	bd8b8f30dd1390e24d7fe0e26fbe7147	15405638-8310-42a5-8745-92c424468f28	nextflow run main.nf --version 0.2 -process.echo

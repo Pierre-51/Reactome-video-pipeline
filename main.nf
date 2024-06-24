@@ -84,7 +84,6 @@ process s3_videos {
 //     """
 // }
 workflow {
-//     delete_noStructure_file()
     neo4j_out = neo4j()
     neo4j_out.splitText()
        .map { it.trim() }
