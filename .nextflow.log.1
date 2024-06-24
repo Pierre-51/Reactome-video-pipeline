@@ -1,0 +1,222 @@
+Jun-24 15:44:19.410 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --version 0.2 -process.echo
+Jun-24 15:44:19.461 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.2
+Jun-24 15:44:19.474 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/psinquin/.nextflow/plugins; core-plugins: nf-amazon@2.5.2,nf-azure@1.6.0,nf-cloudcache@0.4.1,nf-codecommit@0.2.0,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2,nf-tower@1.9.1,nf-wave@1.4.2
+Jun-24 15:44:19.480 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-24 15:44:19.481 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-24 15:44:19.484 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.10.0 in 'deployment' mode
+Jun-24 15:44:19.494 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-24 15:44:19.518 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/psinquin/.nextflow/secrets/store.json
+Jun-24 15:44:19.530 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@d400943] - activable => nextflow.secret.LocalSecretsProvider@d400943
+Jun-24 15:44:19.561 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jun-24 15:44:19.573 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [thirsty_bell] DSL2 - revision: bd8b8f30dd
+Jun-24 15:44:19.575 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-24 15:44:19.575 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jun-24 15:44:19.611 [main] DEBUG nextflow.Session - Session UUID: 04364644-41c3-47fc-8132-d3904999b3fd
+Jun-24 15:44:19.611 [main] DEBUG nextflow.Session - Run name: thirsty_bell
+Jun-24 15:44:19.612 [main] DEBUG nextflow.Session - Executor pool size: 12
+Jun-24 15:44:19.617 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jun-24 15:44:19.621 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-24 15:44:19.640 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.2 build 5914
+  Created: 29-05-2024 06:19 UTC (07:19 BST)
+  System: Mac OS X 14.5
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.6+10-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 85451@MXP4MTFDQF [172.23.49.76]
+  CPUs: 12 - Mem: 16 GB (392.3 MB) - Swap: 2 GB (1.2 GB)
+Jun-24 15:44:19.650 [main] DEBUG nextflow.Session - Work-dir: /Users/psinquin/Desktop/3DstructurePipeline/work [Mac OS X]
+Jun-24 15:44:19.650 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/psinquin/Desktop/3DstructurePipeline/bin
+Jun-24 15:44:19.656 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-24 15:44:19.661 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-24 15:44:19.676 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-24 15:44:19.682 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 13; maxThreads: 1000
+Jun-24 15:44:19.717 [main] DEBUG nextflow.Session - Session start
+Jun-24 15:44:20.102 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-24 15:44:20.153 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 15:44:20.153 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 15:44:20.156 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-24 15:44:20.159 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=16 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Jun-24 15:44:20.160 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jun-24 15:44:20.232 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 15:44:20.232 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 15:44:20.237 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 15:44:20.237 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 15:44:20.241 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 15:44:20.241 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 15:44:20.243 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-24 15:44:20.243 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-24 15:44:20.244 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: searchAndDownloadStructure, neo4j, molstar, s3_json, s3_videos
+Jun-24 15:44:20.245 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Jun-24 15:44:20.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > neo4j
+Jun-24 15:44:20.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > searchAndDownloadStructure
+Jun-24 15:44:20.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > s3_json
+Jun-24 15:44:20.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > molstar
+Jun-24 15:44:20.246 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > s3_videos
+Jun-24 15:44:20.246 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_a5bae41f95806412: /Users/psinquin/Desktop/3DstructurePipeline/main.nf
+Jun-24 15:44:20.246 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jun-24 15:44:20.246 [main] DEBUG nextflow.Session - Session await
+Jun-24 15:44:20.312 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:20.314 [Task submitter] INFO  nextflow.Session - [b9/f53b52] Submitted process > neo4j
+Jun-24 15:44:21.660 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: neo4j; status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/b9/f53b522bcfa127722c241c450ea318]
+Jun-24 15:44:21.661 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=36; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-24 15:44:21.706 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.707 [Task submitter] INFO  nextflow.Session - [e6/0c03e3] Submitted process > searchAndDownloadStructure (3)
+Jun-24 15:44:21.715 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.715 [Task submitter] INFO  nextflow.Session - [28/e9dad3] Submitted process > searchAndDownloadStructure (11)
+Jun-24 15:44:21.717 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.718 [Task submitter] INFO  nextflow.Session - [5f/9acd6f] Submitted process > searchAndDownloadStructure (7)
+Jun-24 15:44:21.721 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.721 [Task submitter] INFO  nextflow.Session - [ff/44f5f3] Submitted process > searchAndDownloadStructure (5)
+Jun-24 15:44:21.723 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.723 [Task submitter] INFO  nextflow.Session - [69/cf8e52] Submitted process > searchAndDownloadStructure (4)
+Jun-24 15:44:21.726 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.726 [Task submitter] INFO  nextflow.Session - [a6/c3f202] Submitted process > searchAndDownloadStructure (1)
+Jun-24 15:44:21.729 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.730 [Task submitter] INFO  nextflow.Session - [e3/7c9300] Submitted process > searchAndDownloadStructure (9)
+Jun-24 15:44:21.734 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.734 [Task submitter] INFO  nextflow.Session - [26/b68698] Submitted process > searchAndDownloadStructure (8)
+Jun-24 15:44:21.737 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.738 [Task submitter] INFO  nextflow.Session - [2e/1d390d] Submitted process > searchAndDownloadStructure (17)
+Jun-24 15:44:21.741 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.741 [Task submitter] INFO  nextflow.Session - [ad/b83413] Submitted process > searchAndDownloadStructure (12)
+Jun-24 15:44:21.744 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.744 [Task submitter] INFO  nextflow.Session - [01/1b8192] Submitted process > searchAndDownloadStructure (6)
+Jun-24 15:44:21.748 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:21.748 [Task submitter] INFO  nextflow.Session - [86/58fba5] Submitted process > searchAndDownloadStructure (10)
+Jun-24 15:44:23.221 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: searchAndDownloadStructure (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/a6/c3f20242f6db50ed90f6345a17af83]
+Jun-24 15:44:23.223 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (1)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/a6/c3f20242f6db50ed90f6345a17af83/PDB_files/P11142.cif` (pattern: `PDB_files/P11142.cif`)
+Jun-24 15:44:23.225 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.225 [Task submitter] INFO  nextflow.Session - [d7/4f8b73] Submitted process > searchAndDownloadStructure (2)
+Jun-24 15:44:23.231 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: searchAndDownloadStructure (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/ff/44f5f34a75a2891d18524b60a5e90d]
+Jun-24 15:44:23.232 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: searchAndDownloadStructure (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/69/cf8e5252166fe107fbd66457cc7a6a]
+Jun-24 15:44:23.234 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (5)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/ff/44f5f34a75a2891d18524b60a5e90d/PDB_files/P00533.cif` (pattern: `PDB_files/P00533.cif`)
+Jun-24 15:44:23.234 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (4)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/69/cf8e5252166fe107fbd66457cc7a6a/PDB_files/Q5S007.cif` (pattern: `PDB_files/Q5S007.cif`)
+Jun-24 15:44:23.239 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.239 [Task submitter] INFO  nextflow.Session - [72/d5122d] Submitted process > searchAndDownloadStructure (13)
+Jun-24 15:44:23.242 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.246 [Task submitter] INFO  nextflow.Session - [a4/062637] Submitted process > searchAndDownloadStructure (14)
+Jun-24 15:44:23.246 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: searchAndDownloadStructure (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/e3/7c9300a36bc103d298bdbab66d5708]
+Jun-24 15:44:23.247 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (9)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/e3/7c9300a36bc103d298bdbab66d5708/PDB_files/O00635.cif` (pattern: `PDB_files/O00635.cif`)
+Jun-24 15:44:23.252 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.252 [Task submitter] INFO  nextflow.Session - [55/da238b] Submitted process > searchAndDownloadStructure (15)
+Jun-24 15:44:23.253 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: searchAndDownloadStructure (17); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/2e/1d390db85b4f0f8fbe338fc0be06ec]
+Jun-24 15:44:23.255 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (17)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/2e/1d390db85b4f0f8fbe338fc0be06ec/PDB_files/P00338.cif` (pattern: `PDB_files/P00338.cif`)
+Jun-24 15:44:23.256 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: searchAndDownloadStructure (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/5f/9acd6fce1903bc94403c43abf8cf7b]
+Jun-24 15:44:23.256 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (7)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/5f/9acd6fce1903bc94403c43abf8cf7b/PDB_files/P34932.cif` (pattern: `PDB_files/P34932.cif`)
+Jun-24 15:44:23.256 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.257 [Task submitter] INFO  nextflow.Session - [1c/990462] Submitted process > searchAndDownloadStructure (16)
+Jun-24 15:44:23.258 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: searchAndDownloadStructure (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/28/e9dad3c7db7baf167c0d5f91300a36]
+Jun-24 15:44:23.258 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: searchAndDownloadStructure (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/e6/0c03e3d8b22eee2f4307f6039c2a10]
+Jun-24 15:44:23.258 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (11)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/28/e9dad3c7db7baf167c0d5f91300a36/PDB_files/O14976.cif` (pattern: `PDB_files/O14976.cif`)
+Jun-24 15:44:23.259 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.259 [Task submitter] INFO  nextflow.Session - [3b/93967e] Submitted process > searchAndDownloadStructure (18)
+Jun-24 15:44:23.259 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (3)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/e6/0c03e3d8b22eee2f4307f6039c2a10/PDB_files/Q9UNE7.cif` (pattern: `PDB_files/Q9UNE7.cif`)
+Jun-24 15:44:23.261 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.261 [Task submitter] INFO  nextflow.Session - [10/95cc61] Submitted process > searchAndDownloadStructure (19)
+Jun-24 15:44:23.289 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.289 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: searchAndDownloadStructure (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/26/b6869836e9fab4710e2e8fb2802277]
+Jun-24 15:44:23.292 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (8)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/26/b6869836e9fab4710e2e8fb2802277/PDB_files/Q99933.cif` (pattern: `PDB_files/Q99933.cif`)
+Jun-24 15:44:23.294 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.296 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.297 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.298 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.299 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.301 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.302 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.306 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.323 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.323 [Task submitter] INFO  nextflow.Session - [3e/6c194b] Submitted process > s3_json (6)
+Jun-24 15:44:23.326 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.326 [Task submitter] INFO  nextflow.Session - [18/92f613] Submitted process > s3_json (9)
+Jun-24 15:44:23.419 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: searchAndDownloadStructure (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/01/1b8192b7794fc02e3656018662acc3]
+Jun-24 15:44:23.420 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (6)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/01/1b8192b7794fc02e3656018662acc3/PDB_files/O95816.cif` (pattern: `PDB_files/O95816.cif`)
+Jun-24 15:44:23.421 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.421 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.422 [Task submitter] INFO  nextflow.Session - [1b/d48265] Submitted process > s3_json (4)
+Jun-24 15:44:23.478 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: searchAndDownloadStructure (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/86/58fba5316e398b9aea3f547bb52bca]
+Jun-24 15:44:23.479 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (10)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/86/58fba5316e398b9aea3f547bb52bca/PDB_files/Q99459.cif` (pattern: `PDB_files/Q99459.cif`)
+Jun-24 15:44:23.480 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:23.480 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:23.480 [Task submitter] INFO  nextflow.Session - [a6/e3613e] Submitted process > s3_json (2)
+Jun-24 15:44:24.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: searchAndDownloadStructure (18); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/3b/93967e20c109e78f93804031704839]
+Jun-24 15:44:24.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: searchAndDownloadStructure (19); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/10/95cc61b4eb9a532d3ca64c86abf915]
+Jun-24 15:44:24.605 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: searchAndDownloadStructure (15); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/55/da238b866c61d4d2455c88f8fe7bbc]
+Jun-24 15:44:24.605 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (18)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/3b/93967e20c109e78f93804031704839/PDB_files/P13569.cif` (pattern: `PDB_files/P13569.cif`)
+Jun-24 15:44:24.605 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (19)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/10/95cc61b4eb9a532d3ca64c86abf915/PDB_files/P38260.cif` (pattern: `PDB_files/P38260.cif`)
+Jun-24 15:44:24.605 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (15)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/55/da238b866c61d4d2455c88f8fe7bbc/PDB_files/P05067.cif` (pattern: `PDB_files/P05067.cif`)
+Jun-24 15:44:24.605 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.606 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.606 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.606 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.606 [Task submitter] INFO  nextflow.Session - [b5/8ff464] Submitted process > s3_json (7)
+Jun-24 15:44:24.609 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.609 [Task submitter] INFO  nextflow.Session - [ac/af3fd7] Submitted process > s3_json (1)
+Jun-24 15:44:24.610 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.610 [Task submitter] INFO  nextflow.Session - [a7/6d0e2a] Submitted process > s3_json (8)
+Jun-24 15:44:24.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: searchAndDownloadStructure (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/d7/4f8b730174e4560ea76ea8da3e931d]
+Jun-24 15:44:24.619 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (2)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/d7/4f8b730174e4560ea76ea8da3e931d/PDB_files/Q9NZL4.cif` (pattern: `PDB_files/Q9NZL4.cif`)
+Jun-24 15:44:24.619 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.620 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.620 [Task submitter] INFO  nextflow.Session - [65/52224e] Submitted process > s3_json (5)
+Jun-24 15:44:24.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: searchAndDownloadStructure (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/72/d5122d05491dae144299ad443dcbbb]
+Jun-24 15:44:24.634 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (13)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/72/d5122d05491dae144299ad443dcbbb/PDB_files/P54253.cif` (pattern: `PDB_files/P54253.cif`)
+Jun-24 15:44:24.636 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.637 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.637 [Task submitter] INFO  nextflow.Session - [19/58f200] Submitted process > s3_json (3)
+Jun-24 15:44:24.637 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: searchAndDownloadStructure (16); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/1c/990462717d6584336d0d97c1ebdd6b]
+Jun-24 15:44:24.638 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (16)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/1c/990462717d6584336d0d97c1ebdd6b/PDB_files/Q8TDR0.cif` (pattern: `PDB_files/Q8TDR0.cif`)
+Jun-24 15:44:24.639 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.640 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.640 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: searchAndDownloadStructure (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/a4/062637c72808b1ff6364e79b5cb85e]
+Jun-24 15:44:24.640 [Task submitter] INFO  nextflow.Session - [54/238311] Submitted process > s3_json (10)
+Jun-24 15:44:24.642 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (14)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/a4/062637c72808b1ff6364e79b5cb85e/PDB_files/O95429.cif` (pattern: `PDB_files/O95429.cif`)
+Jun-24 15:44:24.643 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:24.645 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.645 [Task submitter] INFO  nextflow.Session - [72/5e7229] Submitted process > s3_json (11)
+Jun-24 15:44:24.862 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: s3_json (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/1b/d482657ebb9fea2e37ac67e0ccea38]
+Jun-24 15:44:24.869 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.869 [Task submitter] INFO  nextflow.Session - [e5/04b252] Submitted process > s3_json (12)
+Jun-24 15:44:24.904 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: s3_json (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/3e/6c194b425c967dd2fd4141a20c2a09]
+Jun-24 15:44:24.908 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.908 [Task submitter] INFO  nextflow.Session - [23/128fd4] Submitted process > s3_json (13)
+Jun-24 15:44:24.924 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: s3_json (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/a6/e3613e70fd054af98d24116f0356ab]
+Jun-24 15:44:24.928 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.928 [Task submitter] INFO  nextflow.Session - [27/acadbb] Submitted process > s3_json (14)
+Jun-24 15:44:24.952 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: s3_json (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/18/92f613604a862c4107f147477c8755]
+Jun-24 15:44:24.957 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:24.957 [Task submitter] INFO  nextflow.Session - [2b/ae1023] Submitted process > s3_json (15)
+Jun-24 15:44:25.628 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: searchAndDownloadStructure (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/ad/b83413a59d3546fb5f25fe12126cd5]
+Jun-24 15:44:25.629 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process `searchAndDownloadStructure (12)` is unable to find [UnixPath]: `/Users/psinquin/Desktop/3DstructurePipeline/work/ad/b83413a59d3546fb5f25fe12126cd5/PDB_files/P42858.cif` (pattern: `PDB_files/P42858.cif`)
+Jun-24 15:44:25.630 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process searchAndDownloadStructure > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-24 15:44:25.630 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:25.630 [Task submitter] INFO  nextflow.Session - [cb/e7d32b] Submitted process > s3_json (16)
+Jun-24 15:44:26.134 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: s3_json (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/a7/6d0e2aa3a4dc26fbe43cd805ff2ba8]
+Jun-24 15:44:26.137 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:26.137 [Task submitter] INFO  nextflow.Session - [b0/58ef42] Submitted process > s3_json (17)
+Jun-24 15:44:26.140 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: s3_json (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/b5/8ff464b112dde59b66db21f6d508b7]
+Jun-24 15:44:26.142 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:26.142 [Task submitter] INFO  nextflow.Session - [0d/5ce9b4] Submitted process > s3_json (18)
+Jun-24 15:44:26.151 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: s3_json (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/ac/af3fd78fe833d30d25e3fa7bece209]
+Jun-24 15:44:26.153 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-24 15:44:26.153 [Task submitter] INFO  nextflow.Session - [c2/051241] Submitted process > s3_json (19)
+Jun-24 15:44:26.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: s3_json (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/54/238311d8de3b381faa43c11e59a2e1]
+Jun-24 15:44:26.162 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: s3_json (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/72/5e72293134b7a9ce2e6464320854d5]
+Jun-24 15:44:26.185 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: s3_json (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/65/52224e2c7a4d31c055964eb66d42fd]
+Jun-24 15:44:26.262 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: s3_json (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/19/58f20025b8f34ecb29ac1dede3c6d9]
+Jun-24 15:44:26.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: s3_json (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/e5/04b252fc6911df4cb56a4b1b9ee4a7]
+Jun-24 15:44:26.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: s3_json (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/27/acadbb9789b1c4d90d10efb20e538d]
+Jun-24 15:44:26.450 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: s3_json (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/23/128fd44cfc9a34b6787f37bac42a36]
+Jun-24 15:44:26.697 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: s3_json (15); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/2b/ae102358f1e1e53806a8f356429109]
+Jun-24 15:44:27.209 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: s3_json (16); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/cb/e7d32b2f98c735c4cdbb2a0f24788e]
+Jun-24 15:44:27.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: s3_json (17); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/b0/58ef42de6a037fad0191da143c950e]
+Jun-24 15:44:27.587 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: s3_json (19); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/c2/0512418503e6f4999f2d198233fdfd]
+Jun-24 15:44:28.136 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: s3_json (18); status: COMPLETED; exit: 0; error: -; workDir: /Users/psinquin/Desktop/3DstructurePipeline/work/0d/5ce9b45e4ef99b793c6e4ba19cfedc]
+Jun-24 15:44:28.137 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jun-24 15:44:28.242 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jun-24 15:44:28.242 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-24 15:44:28.244 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jun-24 15:44:28.249 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=39; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=59.9s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=19; peakCpus=19; peakMemory=0; ]
+Jun-24 15:44:28.465 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-24 15:44:28.473 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jun-24 15:44:28.473 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
