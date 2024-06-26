@@ -5,6 +5,23 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/inspectionProfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/07483761-ba39-4ff7-8699-438d985f90c3" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/0c6b1d4d-11f9-44c9-8859-98cfe4548aea" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/15405638-8310-42a5-8745-92c424468f28" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/25f9e9f2-1681-4665-98fe-4620fbf2dc2d" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/2cbd20d4-db7b-45f7-b0d3-7d9f32998b35" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/2e1377c2-8749-42b1-a5ea-1e3f2b9b07c8" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/32cb108d-4599-4d85-9dd8-b09e4f0cbfde" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/52ddab1a-4452-4f3d-9bf5-45b95ebeb5db" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/6617d5fc-25cf-4821-9165-52afee3cf11f" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/70246f0b-e5a9-49a4-be26-d8d89cdc01ce" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/9d82f154-e62d-453a-a55d-82a7e9143492" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/c93ca5f2-9c78-42fc-8b7b-f72027966dbf" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/d3423692-400b-40f1-8e44-07dfa854a363" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow/plr" />
+      <excludeFolder url="file://$MODULE_DIR$/molstar/build" />
+      <excludeFolder url="file://$MODULE_DIR$/molstar/lib" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
