@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/inspectionProfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/.nextflow" />
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/07483761-ba39-4ff7-8699-438d985f90c3" />
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/0c6b1d4d-11f9-44c9-8859-98cfe4548aea" />
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/15405638-8310-42a5-8745-92c424468f28" />
@@ -20,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/c93ca5f2-9c78-42fc-8b7b-f72027966dbf" />
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/cache/d3423692-400b-40f1-8e44-07dfa854a363" />
       <excludeFolder url="file://$MODULE_DIR$/.nextflow/plr" />
+      <excludeFolder url="file://$MODULE_DIR$/cypher-shell-5.19.0" />
       <excludeFolder url="file://$MODULE_DIR$/molstar/build" />
       <excludeFolder url="file://$MODULE_DIR$/molstar/lib" />
     </content>

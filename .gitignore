@@ -2,9 +2,9 @@ build/
 lib/
 
 node_modules/
-cypher-shell-5.19.0/
-.nextflow/
-work/
+/cypher-shell-5.19.0/
+/.nextflow/
+/work/
 debug.log
 npm-debug.log
 tsconfig.tsbuildinfo
