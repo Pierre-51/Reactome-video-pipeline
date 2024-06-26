@@ -76,13 +76,6 @@ process s3_videos {
     aws s3 sync ${path_m} s3://download.reactome.org/structures/ --only-show-errors
     """
 }
-// process delete_noStructure_file {
-//     script:
-//     """
-//     #!/bin/bash
-//     aws s3 rm s3://download.reactome.org/structures/noStructure.txt --only-show-errors
-//     """
-// }
 workflow {
     neo4j_out = neo4j()
     neo4j_out.splitText()
