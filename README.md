@@ -1,3 +1,5 @@
+TO ADD Molstar retrieve, cypher shell version, neo4j credential
+
 # Nextflow Pipeline for PDB File Processing
 
 This pipeline automates the process of querying a Neo4j database, downloading structures, rendering videos, and uploading files to an S3 bucket. The pipeline is managed using Nextflow, and requires `cypher-shell` to interact with the Neo4j database.
