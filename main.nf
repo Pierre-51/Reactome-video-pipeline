@@ -15,7 +15,7 @@ process neo4j {
     script:
     """
     #!/bin/bash
-    ${baseDir}/cypher-shell-5.19.0/bin/cypher-shell -u neo4j -p neo4j12345 -a ${address} -f ${queryCyph} > output.txt && tail -n +2 output.txt | sed 's/"//g' > uniProtID.txt
+    ${baseDir}/cypher-shell-5.21.0/bin/cypher-shell -u neo4j -p neo4j1234 -a ${address} -f ${queryCyph} > output.txt && tail -n +2 output.txt | sed 's/"//g' > uniProtID.txt
     rm -rf output.txt
     """
 }
