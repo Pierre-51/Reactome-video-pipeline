@@ -26,7 +26,7 @@ process searchAndDownloadStructure {
         val uniProtID
 
     output:
-        path "${params.output}/${uniProtID}.cif", optional: true
+        path "${params.output}/${uniProtID}.*", optional: true
         path "${params.output}/files/", optional: true
 
     script:
