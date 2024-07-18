@@ -7,7 +7,7 @@ This pipeline automates the process of querying a Neo4j database, downloading st
 Before running this pipeline, ensure you have the following installed:
 
 1. **Nextflow**: Follow the installation instructions on the [Nextflow website](https://www.nextflow.io/docs/latest/getstarted.html#installation).
-2. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from the [Neo4j website](https://neo4j.com/download-center/#cypher-shell).
+2. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from the [Neo4j website](https://neo4j.com/deployment-center/?cypher-shell#tools-tab). 
 
 ## Pipeline Parameters
 
