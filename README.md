@@ -10,8 +10,8 @@ the Neo4j database.
 
 Before running this pipeline, ensure you have the following installed:
 
-1. **Neo4j**: Follow the instruction to install the [Neo4j Reactome database](https://reactome.org/download-data), don't
-   forget to run it.
+1. **Neo4j**: Follow the instruction to install the docker [Neo4j Reactome database](https://reactome.org/download-data), don't
+   forget to run it. If you want to use a Neo4j database use the option ```--Neo4j true```
 2. **Nextflow**: Follow the installation instructions on
    the [Nextflow website](https://www.nextflow.io/docs/latest/getstarted.html#installation).
 3. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from
@@ -33,7 +33,7 @@ Before running this pipeline, ensure you have the following installed:
 - `cypherScript`: Path to the Cypher query script (default: "queryCyph.cyp").
 - `version`: Version of the pipeline (default: "0.1").
 - `cyphershell_version`: Version of the CypherShell (default: "5.21.0")
-- `address`: Address of the Neo4j database (default: "bolt://localhost:7688").
+- `address`: Address of the Neo4j database (default: "bolt://localhost:7687").
 
 ## Workflow
 

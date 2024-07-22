@@ -1,14 +1,7 @@
 // main.nf
 
-params.output = "Cif_files"
-params.cypherScript = "queryCyph.cyp"
-params.version = "0.1"
-params.cypherShell_version = "5.21.0"
-params.address = "bolt://localhost:7688"
-// address = "bolt://neo4j:7687"
 output = file(params.output)
 queryCyph = file(params.cypherScript)
-
 
 process neo4j {
     output:
@@ -17,11 +10,11 @@ process neo4j {
     script:
     """
     #!/bin/bash
-    ${baseDir}/cypher-shell-${params.cypherShell_version}/bin/cypher-shell -u neo4j -p neo4j1234 -a ${params.address} -f ${queryCyph} > output.txt && tail -n +2 output.txt | sed 's/"//g' > uniProtID.txt
+    ${baseDir}/cypher-shell-${params.cypherShell_version}/bin/cypher-shell -a ${params.address} -u ${params.user} -p ${params.password} -f ${queryCyph} > output.txt && tail -n +2 output.txt | sed 's/"//g' > uniProtID.txt
+
     rm -rf output.txt
     """
 }
-
 process searchAndDownloadStructure {
 
     input:
