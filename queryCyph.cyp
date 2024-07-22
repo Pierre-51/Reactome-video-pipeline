@@ -9,9 +9,9 @@
 //WITH re
 //  WHERE re:ReferenceGeneProduct
 //return COUNT(DISTINCT COALESCE(re.variantIdentifier, re.identifier))
-//LIMIT 100
+//LIMIT 100 1221632
 //1500620
-MATCH (n:Pathway {stId: 'R-HSA-1221632'})
+MATCH (n:Pathway {stId: 'R-HSA-1500620'})
         -[:hasEvent|input|output|catalystActivity|physicalEntity|entityFunctionalStatus|diseaseEntity|regulatedBy|regulator*]->(m:PhysicalEntity)
         -[:referenceEntity]->(re:ReferenceEntity)
 OPTIONAL MATCH (re)<-[:interactor]-(ii:Interaction)-[:interactor]->(i:ReferenceEntity)

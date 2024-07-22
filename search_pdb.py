@@ -61,7 +61,7 @@ def extract_information(best_structure):
     }
     return extracted_data
 
-def process_uniprot_id(uniprot_id, output_dir, version):
+def process_uniprot_id(uniprot_id, output_dir, version, no_structure_path):
     global new_model_url, best_structure
     json_file_url = f'{S3_API}{uniprot_id}.json'
 
@@ -98,12 +98,15 @@ def process_uniprot_id(uniprot_id, output_dir, version):
                 new_model_url = best_structure.get('model_url')
             else:
                 process = False
-                if requests.head(f'{S3_API}NoStructure_{uniprot_id}.txt').status_code != 200:
-                    file_path = Path(output_dir) / 'files'
-                    file_path.mkdir(parents=True, exist_ok=True)
-                    no_structure_path = Path(output_dir) / 'files' / f'NoStructure_{uniprot_id}.txt'
-                    with open(no_structure_path, 'a') as no_structure:
-                        no_structure.write(f'{uniprot_id}\n')
+                with no_structure_path.open('a') as no_structure:
+                    no_structure.write(f'{uniprot_id}\n')
+
+#                 if requests.head(f'{S3_API}NoStructure_{uniprot_id}.txt').status_code != 200:
+#                     file_path = Path(output_dir) / 'files'
+#                     file_path.mkdir(parents=True, exist_ok=True)
+#                     no_structure_path = Path(output_dir) / 'files' / f'NoStructure_{uniprot_id}.txt'
+#                     with open(no_structure_path, 'a') as no_structure:
+#                         no_structure.write(f'{uniprot_id}\n')
 
     if process:
         if new_model_url != saved_model_url or version != saved_version or not video_exists:
@@ -117,11 +120,11 @@ def process_uniprot_id(uniprot_id, output_dir, version):
         else:
             return True
 
-def main(uniprot_id_file, output_dir, version):
-    process_uniprot_id(uniprot_id_file, output_dir, version)
+def main(uniprot_id_file, output_dir, version, base_dir = "~"):
+    process_uniprot_id(uniprot_id_file, output_dir, version, Path(base_dir) / 'no-structure.txt')
 
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         sys.exit(1)
-    uniprot_id_file, output_dir, version = sys.argv[1:]
-    main(uniprot_id_file, output_dir, version)
+    uniprot_id_file, output_dir, version, base_dir = sys.argv[1:]
+    main(uniprot_id_file, output_dir, version, base_dir)
