@@ -43,6 +43,10 @@ process molstar {
     script:
     """
     #!/bin/bash
+    while true;
+    do
+      sleep 10000
+    done
     mkdir -p output_molstar/
     if [ -f "${cifFile}" ]; then
         node $baseDir/molstar/lib/commonjs/examples/image-renderer/webm_renderer.js ${cifFile} output_molstar/
@@ -87,8 +91,8 @@ workflow {
        .map { it.trim() }
        .set { uniProtIDs }
     (file, path_s) = searchAndDownloadStructure(uniProtIDs)
-    s3_json(path_s)
+//     s3_json(path_s)
     path_m = molstar(file)
-    s3_videos(path_m)
-    s3_file(file.collect())
+//     s3_videos(path_m)
+//     s3_file(file.collect())
 }
