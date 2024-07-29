@@ -9,13 +9,14 @@ the Neo4j database.
 Before running this pipeline, ensure you have the following installed:
 
 1. **Neo4j**: Follow the instruction to install the docker [Neo4j Reactome database](https://reactome.org/download-data), don't
-   forget to run it. If you want to use a Neo4j database use the option ```--Neo4j true```
+   forget to run it. If you want to use a Neo4j Deskop modify the address in nextflow.config. 
 2. **Nextflow**: Follow the installation instructions on
    the [Nextflow website](https://www.nextflow.io/docs/latest/getstarted.html#installation).
-3. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from
+   Java is required.
+4. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from
    the [Neo4j website](https://neo4j.com/deployment-center/?cypher-shell#tools-tab).
-4. **Molstar**: To install Mol* run
-
+5. **Molstar**: To install Mol* run
+   Before installing the Mol* packages, you must have pyhton and python3 installed. The way to do it depend of your configuration, check on the web. 
 ```bash
    cd molstar
    npm install 
@@ -24,7 +25,16 @@ Before running this pipeline, ensure you have the following installed:
 ```
 
 5. **AWS**: Ensure the connection with an [AWS s3](https://aws.amazon.com/s3/) server.
-
+```bash
+aws credential
+```
+7. Before launching the pipeline, you may need to install requests using a virtuel env
+```bash
+   python3 -m venv 'path/to/venv'
+   source path/to/venv/bin/activate
+   python3 -m pip install requests
+```
+   
 ## Pipeline Parameters
 
 - `output`: Directory where PDB files will be saved (default: "Cif_files").
