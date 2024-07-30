@@ -43,13 +43,9 @@ process molstar {
     script:
     """
     #!/bin/bash
-    while true;
-    do
-      sleep 10000
-    done
     mkdir -p output_molstar/
     if [ -f "${cifFile}" ]; then
-        node $baseDir/molstar/lib/commonjs/examples/image-renderer/webm_renderer.js ${cifFile} output_molstar/
+        node  ${baseDir}/molstar/lib/commonjs/examples/image-renderer/webm_renderer.js ${cifFile} output_molstar/
         rm -d ${cifFile}
     fi
     """
@@ -71,7 +67,10 @@ process s3_file {
     script:
     """
     #!/bin/bash
-    aws s3 sync ${baseDir}/no-structure.txt s3://download.reactome.org/structures/ --only-show-errors
+
+    if [ -f ${baseDir}/no-structure.txt ]; then
+        aws s3 sync ${baseDir}/no-structure.txt s3://download.reactome.org/structures/ --only-show-errors
+    fi
     """
 }
 process s3_videos {
@@ -91,8 +90,8 @@ workflow {
        .map { it.trim() }
        .set { uniProtIDs }
     (file, path_s) = searchAndDownloadStructure(uniProtIDs)
-//     s3_json(path_s)
+    s3_json(path_s)
     path_m = molstar(file)
-//     s3_videos(path_m)
-//     s3_file(file.collect())
+    s3_videos(path_m)
+    s3_file(file.collect())
 }

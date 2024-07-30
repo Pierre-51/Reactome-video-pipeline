@@ -75,8 +75,16 @@ def process_uniprot_id(uniprot_id, output_dir, version, no_structure_path):
         saved_model_url = None
         saved_version = None
 
-    video_exists = all(requests.head(f'{S3_API}{uniprot_id}.{extension}').status_code == 200
-                       for extension in ['webm', 'mov'])
+    try:
+        video_exists = all(
+            requests.head(f'{S3_API}{uniprot_id}.{extension}').status_code == 200
+            for extension in ['webm', 'mov']
+        )
+    except requests.RequestException as e:
+        video_exists = False 
+
+    # video_exists = all(requests.head(f'{S3_API}{uniprot_id}.{extension}').status_code == 200
+    #                    for extension in ['webm', 'mov'])
     process = True
     structures_alpha = search(uniprot_id, ALPHAFOLD_API)
     if structures_alpha:
@@ -100,13 +108,6 @@ def process_uniprot_id(uniprot_id, output_dir, version, no_structure_path):
                 process = False
                 with no_structure_path.open('a') as no_structure:
                     no_structure.write(f'{uniprot_id}\n')
-
-#                 if requests.head(f'{S3_API}NoStructure_{uniprot_id}.txt').status_code != 200:
-#                     file_path = Path(output_dir) / 'files'
-#                     file_path.mkdir(parents=True, exist_ok=True)
-#                     no_structure_path = Path(output_dir) / 'files' / f'NoStructure_{uniprot_id}.txt'
-#                     with open(no_structure_path, 'a') as no_structure:
-#                         no_structure.write(f'{uniprot_id}\n')
 
     if process:
         if new_model_url != saved_model_url or version != saved_version or not video_exists:
