@@ -16,6 +16,9 @@ process neo4j {
     """
 }
 process searchAndDownloadStructure {
+    errorStrategy { sleep(Math.pow(3, task.attempt) * 200 as long); return 'retry' }
+    maxRetries 5
+
 
     input:
         val uniProtID
@@ -52,6 +55,9 @@ process molstar {
 }
 
 process s3_json {
+    errorStrategy { sleep(Math.pow(3, task.attempt) * 200 as long); return 'retry' }
+    maxRetries 5
+
     input:
         path path_s
 
@@ -62,6 +68,9 @@ process s3_json {
     """
 }
 process s3_file {
+    errorStrategy { sleep(Math.pow(3, task.attempt) * 200 as long); return 'retry' }
+    maxRetries 5
+
     input:
         val toto
     script:
@@ -74,6 +83,8 @@ process s3_file {
     """
 }
 process s3_videos {
+    errorStrategy { sleep(Math.pow(3, task.attempt) * 200 as long); return 'retry' }
+    maxRetries 5
     input:
         path path_m
 
@@ -81,6 +92,7 @@ process s3_videos {
     """
     #!/bin/bash
     aws s3 sync ${path_m} s3://download.reactome.org/structures/ --only-show-errors
+    rm -rf ${path_m}
     """
 }
 
