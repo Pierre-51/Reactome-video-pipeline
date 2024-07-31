@@ -1,6 +1,5 @@
 MATCH (i:ReferenceGeneProduct)
 RETURN DISTINCT i.identifier
-
 //MATCH (n:Pathway {hasDiagram:TRUE, hasEHLD:FALSE})-[:hasEvent|input|output|catalystActivity|physicalEntity|entityFunctionalStatus|diseaseEntity|regulatedBy|regulator*]->(m:PhysicalEntity)-[:referenceEntity]->(re:ReferenceEntity)
 //OPTIONAL MATCH (re)<-[:interactor]-(ii:Interaction)-[:interactor]->(i:ReferenceEntity)
 //WITH re, i, ii
