@@ -15,7 +15,7 @@ Before running this pipeline, ensure you have the following installed:
    Java is required.
 4. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from
    the [Neo4j website](https://neo4j.com/deployment-center/?cypher-shell#tools-tab).
-5. **Molstar**: Before installing the Mol* packages, be sure to have nodes.js (20+) installed. You must have python and python3 installed. The way to do it depend of your configuration, check on the web.
+5. **Molstar**: Before installing the Mol* packages, be sure to have nodes.js (17+) installed. You must have python and python3 installed. The way to do it depend of your configuration, check on the web.
 Install all of these packages. 
 ```bash
 apt-get update && sudo apt-get install -y \
