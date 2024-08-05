@@ -10,6 +10,10 @@ Before running this pipeline, ensure you have the following installed:
 
 1. **Neo4j**: Follow the instruction to install the docker [Neo4j Reactome database](https://reactome.org/download-data), don't
    forget to run it. If you want to use a Neo4j Deskop modify the address in nextflow.config. 
+   to run with docker launch : 
+   ```bash
+   docker run -p 7474:7474 -p 7687:7687 -e NEO4J_dbms_memory_heap_maxsize=8g reactome/graphdb:latest
+   ```
 2. **Nextflow**: Follow the installation instructions on
    the [Nextflow website](https://www.nextflow.io/docs/latest/getstarted.html#installation).
    Java is required.
@@ -58,11 +62,13 @@ Then you can run :
 
 5. **AWS**: Ensure the connection with an [AWS s3](https://aws.amazon.com/s3/) server.
 ```bash
+brew install awscli
 aws credential
 ```
 7. Before launching the pipeline, you may need to install requests python package.
 ```bash
    python3 -m pip install requests
+   (you might need to : --break-system-packages)
 ```
    
 ## Pipeline Parameters
@@ -124,6 +130,7 @@ Uploads video files to an S3 bucket.
     ```bash
     nextflow run main.nf
     ```
+   (in case of error think about the -resume) 
 
 ## Example Cypher Script (`queryCyph.cyp`)
 
