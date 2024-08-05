@@ -1,4 +1,4 @@
-# Nextflow Pipeline for Cif File Processing
+# Nextflow Pipeline for Cif/Pdb File Processing
 
 This pipeline automates the process of querying a Neo4j database, downloading structures, rendering videos, and
 uploading files to an S3 bucket. The pipeline is managed using Nextflow, and requires `cypher-shell` to interact with
@@ -15,12 +15,44 @@ Before running this pipeline, ensure you have the following installed:
    Java is required.
 4. **Cypher Shell**: This is required to run Cypher queries against the Neo4j database. Download it from
    the [Neo4j website](https://neo4j.com/deployment-center/?cypher-shell#tools-tab).
-5. **Molstar**: To install Mol* run
-   Before installing the Mol* packages, you must have pyhton and python3 installed. The way to do it depend of your configuration, check on the web. 
+5. **Molstar**: Before installing the Mol* packages, you must have pyhton and python3 installed. The way to do it depend of your configuration, check on the web.
+Install all of these packages. 
+```bash
+apt-get update && sudo apt-get install -y \
+    default-jre \
+    wget \
+    unzip \
+    net-tools \
+    ffmpeg \
+    pkg-config \
+    libx11-dev \
+    libxi-dev \
+    libcairo2-dev \
+    libpango1.0-dev \
+    libjpeg-dev \
+    libgif-dev \
+    librsvg2-dev \
+    build-essential \
+    libglx-dev \
+    libgl-dev \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri \
+    xvfb \
+    libsm6 \
+    libxext6 \
+    libgl1-mesa-dev \
+    libosmesa6-dev \
+    xorg \
+    xserver-xorg \
+    libxext-dev \
+    libglapi-mesa \
+    mesa-utils \
+```
+Then you can run : 
 ```bash
    cd molstar
    npm install 
-   npm run build
+   npm run rebuild
    cd ../
 ```
 
@@ -28,10 +60,8 @@ Before running this pipeline, ensure you have the following installed:
 ```bash
 aws credential
 ```
-7. Before launching the pipeline, you may need to install requests using a virtuel env
+7. Before launching the pipeline, you may need to install requests python package.
 ```bash
-   python3 -m venv 'path/to/venv'
-   source path/to/venv/bin/activate
    python3 -m pip install requests
 ```
    
